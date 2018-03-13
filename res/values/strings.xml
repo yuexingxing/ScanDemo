@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">扫描打印</string>
+    <string name="action_settings">Settings</string>
+    <!-- connect页面 -->
+    <string name="text_type">机型</string>
+    <string name="text_porttype">接口</string>
+    <string name="text_printway">传输方式</string>
+    <string name="TextView_link">联系我们</string>
+    <string name="TextView_linktest">跳转到下一页</string>
+    <string name="TextView_close">关闭</string>
+    <string name="mes_confail">连接失败</string>
+    <string name="mes_consuccess">连接成功</string>
+    <string name="mes_nextpage">请先连接</string>
+    <!-- printmode页面 -->
+    <string name="button_text">文本</string>
+    <string name="button_pic">图形</string>
+    <string name="button_label">标签打印</string>
+    <string name="button_buzzer">蜂鸣器</string>
+    <string name="button_picture">照片打印</string>
+    <string name="button_choose">选择</string>
+    <string name="button_th">阀值：（0-254）</string>
+    <string name="mes_noeg">当前选择的不是标签打印机或当前打印机类型不支持</string>
+    <string name="str1">寄件人：张三</string>
+    <string name="str2">邮编：10010</string>
+    <string name="str3">地址：北京市海淀区上地东路</string>
+    <string name="str4">计数重量（kg）：0</string>
+    <string name="str5">收件人：李四</string>
+    <string name="str6">电话：10086</string>
+    <string name="str7">邮编：10011</string>
+    <string name="str8">地址：北京市昌平区</string>
+    <string name="str9">收件人签名：</string>
+    <string name="str10">收货时间： 年   月   日</string>
+    <string name="str11">订单ID：</string>
+    <!-- general页面 -->
+    <string name="button_cutpar">切纸</string>
+    <string name="editText1">x</string>
+    <string name="editText2">y</string>
+    <string name="autoCompleteText_text">打印测试</string>
+    <string name="textView_31">毫秒（MS）</string>
+    <string name="textView_3">宽</string>
+    <string name="textView_4">高</string>
+    <string name="checkBox01">倍宽</string>
+    <string name="checkBox02">倍高</string>
+    <string name="checkBox03">加粗</string>
+    <string name="checkBox04">下划线</string>
+    <string name="checkBox05">小字体</string>
+    <string name="checkBox06">自动循环发送</string>
+    <string name="checkBox07">反白</string>
+    <string name="radio0">左对齐</string>
+    <string name="radio1">居中</string>
+    <string name="radio2">右对齐</string>
+    <string name="button_printtext"> 打  印  </string>
+    <string name="button_state">状态</string>
+    <string name="mes_stateOK">打印机状态：正确</string>
+    <string name="mes_statePE">打印机状态：缺纸</string>
+    <string name="mes_stateNet">打印机状态：网络异常</string>
+    <string name="mes_stateOffline">打印机状态：脱机</string>
+    <string name="mes_stateReset">打印机状态：复位错误</string>
+    <string name="mes_statePaperjam">打印机状态：卡纸</string>
+    <string name="mes_stateThread">线程异常</string>
+    <!-- barcode页面 -->
+    <string name="barcode">一维码</string>
+    <string name="QRcode">二维码</string>
+    <!-- <string name="bartype">文本</string> -->
+    <string name="textView_bartype">类型</string>
+    <string name="textView_bartext">内容</string>
+    <string name="textView_barwide">宽度</string>
+    <string name="textView_barhight">高度</string>
+    <string name="textView_barhri">位置</string>
+    <string name="textView_barsize">放大</string>
+    <string name="textView_barversion">版本</string>
+    <string name="textView_barerr">纠错</string>
+    <string name="textView_barlines">行字</string>
+    <string name="button_barPrint">打印</string>
+    <!-- textapply页面和 picapply页面差不多可参考 -->
+    <!-- move -->
+    <string name="text_move">瑞工国际影城\r\n\r\n</string>
+    <string name="text_move1">影厅 得实大厦 时间 2015年1月16号\r\n</string>
+    <string name="text_move2">一号大厅\t12:18开场\r\n</string>
+    <string name="text_move3">影片 清时明月 \r\n</string>
+    <string name="text_move4">主演：天明，小月\r\n</string>
+    <string name="text_move5">座位 一排01号 票价 50元\r\n</string>
+    <!-- pic move -->
+    <string name="text_move6">"影厅"</string>
+    <string name="text_move7">"时间"</string>
+    <string name="text_move8">"影片"</string>
+    <string name="text_move9">"座位"</string>
+    <string name="text_move10">"票价"</string>
+    <string name="text_move11">"得实大厦"</string>
+    <string name="text_move12">"2015年2月1号"</string>
+    <string name="text_move13">"心花怒放"</string>
+    <string name="text_move14">"01排01号"</string>
+    <string name="text_move15">"请在电影开始前入场"</string>
+    <!-- shop -->
+    <string name="text_customer">用户ID:1234\r\n时间:</string>
+    <string name="text_line">----------------------------------\r\n</string>
+    <string name="text_name">名称</string>
+    <string name="text_quant">数量</string>
+    <string name="text_unit">单价</string>
+    <string name="text_amount">总计\r\n</string>
+    <string name="text_ity"></string>
+    <string name="text_price"></string>
+    <string name="text_goods1">苹果</string>
+    <string name="text_goods2">葡萄</string>
+    <string name="text_goods3">香梨</string>
+    <string name="text_total">合计:</string>
+    <string name="text_payment">支付:</string>
+    <string name="text_change">找零:</string>
+    <string name="text_settlement">结算:</string>
+    <string name="text_mes">商店名称:店铺\r\n"网址:www.abc.com\r\n地址:北京市海淀区得实大厦中区88号\r\n电话:0755-123456789\r\n客服:4008-123-456\r\n</string>
+    <!-- shoppic -->
+    <string name="text_shop1">"欢迎光临"</string>
+    <string name="text_shop2">"店铺名称"</string>
+    <string name="text_shop3">"收银员：收银员名称"</string>
+    <string name="text_shop4">"时间：2015-01-01"</string>
+    <string name="text_shop5">"商品名称           单价        数量        金额"</string>
+    <string name="text_shop6">"花生                      2.00          1                2.00"</string>
+    <string name="text_shop7">"合计:￥100元"</string>
+    <string name="text_shop8">"优惠金额:￥90元"</string>
+    <string name="text_shop9">"电话：22222222222"</string>
+    <string name="text_shop10">"地址：北京得实大厦"</string>
+    <string name="text_shop11">"谢谢惠顾，欢迎下次光临！"</string>
+
+    <!-- fire -->
+    <string name="text_fire">北京 售</string>
+    <string name="text_fire1">"北 京  ————> 武 汉"</string>
+    <string name="text_fire2">"Beijing         Wuhan"</string>
+    <string name="text_fire3">"2015年02月16日01:01开   1车12号"</string>
+    <string name="text_fire4">"￥180.00元           新空调硬坐"</string>
+    <string name="text_fire5">"仅限当日当次车"</string>
+    <!-- firepic -->
+    <string name="text_fire7">"北京"</string>
+    <string name="text_fire8">"售"</string>
+    <string name="text_fire9">"武 汉"</string>
+    <string name="text_fire10">"K250次"</string>
+    <string name="text_fire11">"2015年02月15日09:08开"</string>
+    <string name="text_fire12">"12车22号下铺"</string>
+    <string name="text_fire13">"￥109元"</string>
+    <string name="text_fire14">"新空调硬卧"</string>
+    <string name="text_fire15">"仅限当日当次车"</string>
+    <string name="text_fire16">"火车票"</string>
+    <!-- lab -->
+    <string name="text_lab">"型号"</string>
+    <string name="text_lab1">"对账单号"</string>
+    <string name="text_lab2">"业务类型"</string>
+    <string name="text_lab3">"单据金额"</string>
+    <string name="text_lab4">"已收"</string>
+    <string name="text_lab5">"应收"</string>
+    <string name="text_lab6"> "已免收"</string>
+    <string name="text_lab7">"欠款"</string>
+    <string name="text_lab8">"批发"</string>
+    <string name="text_lab9">"                               合计                         1323.00         0.00          0.00         1323.00         0.00 "</string>
+    <string name="text_lab10">"本单收款（大写）    壹仟叁佰贰拾叁"</string>
+    <string name="button_customer">售货单</string>
+    <string name="textView_name">售货员</string>
+    <string name="textView_pay">付款</string>
+    <string name="button_pdfps">打印页</string>
+    <string name="button_pdfw">宽</string>
+    <string name="button_pdfpe">页结束</string>
+    <string name="button_pdf">PDF文件</string>
+    <string name="button_movie">电影票</string>
+    <string name="button_fire">火车票</string>
+    <string name="button_shopping">购物劵</string>
+    <!-- lang页面和printdraw,general页面是一样的可以用一个 -->
+    <string name="checkBox_lanlab">标签</string>
+    <string name="textView_lanw">宽</string>
+    <string name="textView_lanh">高</string>
+    <string name="button_printlan">打印</string>
+    <string name="autoCompleteText_lan">汉语 --> 我爱你\r\n英语 --> I love you\r\n法语 --> Je t`aime \r\n德语 --> Ich liebe Dich\r\n芬兰 --> Minarakastan sinua\r\n荷兰 --> IK hou van jou\r\n捷克 --> Miluji te\r\n丹麦 --> Jeg elsker dig\r\n俄罗斯 --> Я люблю тебя\r\n日本 --> あいしてる \r\n韩语 --> 사랑해 \r\n泰国 --> Ch`an Rak Khun\r\n越南 --> Em ye`u anh \r\n冰岛 --> e`g elska tig\r\n瑞典 --> Jag lskar dig\r\n犹太语 --> Ani ohev otach\r\n匈牙利 --> Szeretlek\r\n希腊语 --> S`agapo\r\n立陶宛 --> Tave Myliu/r/n </string>
+    <!-- printdraw页面 -->
+    <string name="checkBox_pic">标签</string>
+    <string name="textView3">宽</string>
+    <string name="textView4">高</string>
+    <string name="button_pridraw">打印</string>
+    <!-- picapply页面 -->
+    <string name="button_pdfpath">路径</string>
+    <string name="button_picmovie">电影票</string>
+    <string name="button_picfire">火车票</string>
+    <string name="button_picshopping">购物劵</string>
+    <string name="button_pictable">打印表格</string>
+    <!-- bluetooth页面 -->
+    <string name="Text_bt">蓝牙端口</string>
+    <string name="Text_btname">蓝牙名称</string>
+    <string name="Text_btmax">蓝牙地址</string>
+    <string name="button_btcon">连接</string>
+    <!-- wifi页面 -->
+    <string name="Text_wifi">无线端口</string>
+    <string name="Text_ip">IP地址</string>
+    <string name="Text_port">端口</string>
+    <string name="button_wificon">连接</string>
+    <!-- usb页面 -->
+    <string name="Text_usbName">USB端口</string>
+    <string name="Text_usb">USB</string>
+    <string name="button_usbcon">连接</string>
+    <!-- com页面 -->
+
+    <string name="Text_comName">串口端口</string>
+    <string name="Text_com">串口</string>
+    <string name="Text_comBaud">波特率</string>
+    <string name="button_comcon">连接</string>
+    <!-- tab页面 -->
+    <string name="tab_general">通用</string>
+    <string name="tab_barcode">条码</string>
+    <string name="tab_textapply">应用</string>
+    <string name="tab_lan">多语言</string>
+    <string name="tab_pic">绘图</string>
+    <string name="tab_picapply">应用</string>
+    <!-- link页面 -->
+    <string name="textView_link">公司简介：北京瑞工科技发展有限公司是专业从事特种打印的高科技企业；是同时具备研发、生产和销售能力的业内领航者；是特种打印方案的开创者、集成者和优化者。瑞工产品涉及便携式打印机、蓝牙打印机、标签/条码打印机、无线打印服务器等全系产品。
+\r\n公司名称：北京瑞工科技有限公司\r\n邮箱：mk@rgprt.com\r\n网址：http://www.rgprt.com/\r\n联系电话：010-62985019\r\n地址：北京市海淀区上地东路9号得实大厦二层中区5号</string>
+    <string name="button_desktop">桌面打印</string>
+
+</resources>

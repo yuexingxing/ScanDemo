@@ -1,0 +1,139 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+     tools:context="${relativePackage}.${activityClass}" 
+      xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical" 
+        >
+<RadioGroup
+    	 android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="58"
+            android:textColor="@color/tabDark" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="80"
+            android:textColor="@color/tabDark" />
+         <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A4"
+            android:textColor="@color/tabDark" />
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/button_picmovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_picmovie"/>
+    <Button
+        android:id="@+id/Button_picfire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_picfire"/>
+    <Button
+        android:id="@+id/Button_picshopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_picshopping" />
+     <Button
+        android:id="@+id/Button_pictable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_pictable" />
+      <Button
+        android:id="@+id/Button_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_pdf" />
+    <!--  <Button
+        android:id="@+id/Button_desktop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_desktop" /> -->
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/button_pdfpath" />
+
+       <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:text="@string/button_pdfps" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:ems="3"
+        android:text="1" />
+
+ <!-- 
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:text="@string/button_pdfw" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:ems="4"
+        android:text="1480" />
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:text="@string/button_pdfpe" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="3"
+        android:text="1" >
+        <requestFocus android:layout_height="wrap_content" />
+    </EditText> -->
+</LinearLayout>
+</LinearLayout>
+        
