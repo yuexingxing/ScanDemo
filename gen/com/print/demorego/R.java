@@ -145,7 +145,7 @@ public final class R {
         public static final int Text_usb=0x7f0c0060;
         public static final int Text_usbName=0x7f0c005e;
         public static final int Text_wifi=0x7f0c0063;
-        public static final int action_settings=0x7f0c0082;
+        public static final int action_settings=0x7f0c0081;
         public static final int activity_menu_count=0x7f0c0042;
         public static final int activity_menu_version=0x7f0c0043;
         public static final int autoCompleteText_lan=0x7f0c003e;
@@ -200,21 +200,20 @@ public final class R {
         public static final int edit_wifiip=0x7f0c0064;
         public static final int edit_wifiport=0x7f0c0067;
         public static final int horizontalScrollView1=0x7f0c0055;
-        public static final int icon=0x7f0c0080;
+        public static final int icon=0x7f0c007f;
         public static final int imageView1=0x7f0c0040;
         public static final int imageView_draw=0x7f0c0053;
         public static final int imageView_show=0x7f0c0046;
         public static final int item_scan_tv1=0x7f0c0079;
         public static final int item_scan_tv2=0x7f0c007a;
-        public static final int item_scan_tv3=0x7f0c007b;
-        public static final int item_scan_tv4=0x7f0c007c;
+        public static final int item_scan_tv4=0x7f0c007b;
         public static final int linearLayout0=0x7f0c0015;
         public static final int linearLayout1=0x7f0c0000;
         public static final int linearLayout2=0x7f0c0062;
         public static final int linearLayout3=0x7f0c005d;
         public static final int linearLayout4=0x7f0c0007;
-        public static final int lv_public=0x7f0c007d;
-        public static final int message=0x7f0c007f;
+        public static final int lv_public=0x7f0c007c;
+        public static final int message=0x7f0c007e;
         public static final int radio0=0x7f0c0033;
         public static final int radio1=0x7f0c0034;
         public static final int radio2=0x7f0c0035;
@@ -224,7 +223,7 @@ public final class R {
         public static final int radioGroup1=0x7f0c0032;
         public static final int radioGroup2=0x7f0c0047;
         public static final int radioGroup_barcode=0x7f0c0069;
-        public static final int spinnerImageView=0x7f0c007e;
+        public static final int spinnerImageView=0x7f0c007d;
         public static final int spinner_Baud=0x7f0c000b;
         public static final int spinner_barcodetype=0x7f0c006d;
         public static final int spinner_btname=0x7f0c0002;
@@ -252,7 +251,7 @@ public final class R {
         public static final int text_printway=0x7f0c0013;
         public static final int text_type=0x7f0c000f;
         public static final int text_version=0x7f0c000e;
-        public static final int title=0x7f0c0081;
+        public static final int title=0x7f0c0080;
     }
     public static final class layout {
         public static final int activity_bluetooth=0x7f030000;

@@ -48,10 +48,10 @@ public class PrinterActivity extends Activity {
 
 				helper.setText(R.id.item_scan_tv1, (commonAdapter.getPosition() + 1) + "");
 				helper.setText(R.id.item_scan_tv2, item.getBillcode());
-				helper.setText(R.id.item_scan_tv3, item.getName());
 				helper.setText(R.id.item_scan_tv4, item.getTime());
 			}
 		};
+
 		listView.setAdapter(commonAdapter);
 	}
 
@@ -69,17 +69,16 @@ public class PrinterActivity extends Activity {
 	 */
 	private void printData(String billcode){
 
-//		PrintInfo info = checkData(billcode);
-//		if(info == null){
-//			ToolsUtil.showToast("未找到对应条码");
-//			return;
-//		}
+		//		PrintInfo info = checkData(billcode);
+		//		if(info == null){
+		//			ToolsUtil.showToast("未找到对应条码");
+		//			return;
+		//		}
 
-				PrintInfo info = new PrintInfo();
-				info.setBillcode(billcode);
-				info.setName("西瓜");
-
+		PrintInfo info = new PrintInfo();
+		info.setBillcode(billcode);
 		info.setTime(ToolsUtil.getTime());
+
 		dataList.add(info);
 		commonAdapter.notifyDataSetChanged();
 
@@ -107,11 +106,11 @@ public class PrinterActivity extends Activity {
 
 	public void clearData(View v){
 
-				printData("12345678");
+		printData("12345678");
 
-//		dataList.clear();
-//		commonAdapter.notifyDataSetChanged();
-//		ToolsUtil.showToast("列表清除成功");
+		//		dataList.clear();
+		//		commonAdapter.notifyDataSetChanged();
+		//		ToolsUtil.showToast("列表清除成功");
 	}
 
 	public void back(View v){
