@@ -51,6 +51,7 @@
             android:layout_marginRight="5dp"
             android:gravity="right"
             android:text="0"
+            android:visibility="invisible"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -92,6 +93,7 @@
                 android:background="@drawable/shape_color_main_button"
                 android:onClick="inputExcel"
                 android:text="导入数据"
+                android:visibility="invisible"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
         </LinearLayout>

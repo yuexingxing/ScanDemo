@@ -17,7 +17,7 @@ public class preDefiniation {
 		/**
 		 * align left
 		 */
-		AT_LEFT(1000),
+		AT_LEFT(1),
 
 		/**
 		 * align center

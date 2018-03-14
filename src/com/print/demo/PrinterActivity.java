@@ -106,11 +106,9 @@ public class PrinterActivity extends Activity {
 
 	public void clearData(View v){
 
-		printData("12345678");
-
-		//		dataList.clear();
-		//		commonAdapter.notifyDataSetChanged();
-		//		ToolsUtil.showToast("列表清除成功");
+		dataList.clear();
+		commonAdapter.notifyDataSetChanged();
+		ToolsUtil.showToast("列表清除成功");
 	}
 
 	public void back(View v){

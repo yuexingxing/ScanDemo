@@ -86,10 +86,8 @@ public class PrintUtil {
 		context.getObject().ASCII_CtrlFeedLines(context.getState(), 0);
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
-		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
-
+		
 		context.getObject().ASCII_CtrlAlignType(context.getState(), 0);
-
 		context.getObject().ASCII_PrintString(context.getState(),
 				0, 0,
 				1, 0,
@@ -103,7 +101,7 @@ public class PrintUtil {
 				context.getState(),
 				BarcodeType.BT_CODE39.getValue(),
 				3,
-				120,
+				140,
 				0, info.getBillcode());
 
 		context.getObject().ASCII_CtrlReset(context.getState());
@@ -116,7 +114,8 @@ public class PrintUtil {
 
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
-		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
+//		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
+		context.getObject().ASCII_CtrlFeedLines(context.getState(), 1);
 		context.getObject().ASCII_CtrlFeedLines(context.getState(), 1);
 
 		context.getObject().CON_PageEnd(context.getState(), context.getPrintway());
