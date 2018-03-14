@@ -34,6 +34,7 @@ public class ConnectAvtivity extends Activity {
 	public int state;
 	public String PrintName;
 	public Button con;
+	public Button btnScan;
 	public Spinner type;
 	public Spinner usb;
 	public Spinner com;
@@ -183,6 +184,27 @@ public class ConnectAvtivity extends Activity {
 							connect(Adress.getText().toString());
 						}
 					});
+
+					btnScan = (Button) findViewById(R.id.button_scan);
+					btnScan.setOnClickListener(new OnClickListener() {
+
+						@Override
+						public void onClick(View arg0) {
+							// TODO Auto-generated method stub
+
+							if(mBconnect == false){
+								ToolsUtil.showToast("请先连接打印机");
+								return;
+							}
+
+							Intent intent = new Intent(ConnectAvtivity.this, PrinterActivity.class);
+							context.setState(state);
+							context.setName(PrintName);
+							context.setPrintway(printway.getSelectedItemPosition());
+							startActivity(intent);
+						}
+					});
+
 					break;
 				case 1:// wifi
 					view1 = getLayoutInflater().inflate(R.layout.activity_wifi,
@@ -288,29 +310,25 @@ public class ConnectAvtivity extends Activity {
 
 			con.setText(R.string.button_btcon);// "连接"
 			mBconnect = false;
+			CustomProgress.dissDialog();
 		} else {
 
 			state = context.getObject().CON_ConnectDevices(PrintName, port, 200);
 
 			if (state > 0) {
 
-				ToolsUtil.showToast("连接成功");
+				ToolsUtil.showToast("打印机连接成功");
 				mBconnect = true;
 				con.setText(R.string.TextView_close);// "关闭"
 				//				Intent intent = new Intent(ConnectAvtivity.this, PrintModeActivity.class);
-				Intent intent = new Intent(ConnectAvtivity.this, PrinterActivity.class);
-				context.setState(state);
-				context.setName(PrintName);
-				context.setPrintway(printway.getSelectedItemPosition());
-				startActivity(intent);
 			} else {
-				Toast.makeText(ConnectAvtivity.this, R.string.mes_confail, Toast.LENGTH_SHORT).show();
+				ToolsUtil.showToast("打印机连接失败");
 				mBconnect = false;
 				con.setText(R.string.button_btcon);// "连接"
 			}
+			CustomProgress.dissDialog();
 		}
-
-		CustomProgress.dissDialog();
+		
 	}
 
 

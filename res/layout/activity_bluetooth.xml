@@ -28,12 +28,14 @@
                     android:id="@+id/Text_bt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="3dp"
-                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="bottom"
                     android:text="@string/Text_bt"
-                    android:textSize="12sp" />
+                    android:textSize="13sp"
+                    android:visibility="gone" />
             </RelativeLayout>
             <!-- bt的name或者地址 -->
+
 
             <!-- bt的 -->
 
@@ -55,9 +57,9 @@
                     android:id="@+id/Text_btname"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
                     android:text="@string/Text_btname"
                     android:textSize="12sp" />
             </RelativeLayout>
@@ -84,19 +86,18 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/edit_btmax"
                     android:layout_alignBottom="@+id/edit_btmax"
-                    android:layout_alignParentLeft="true"
-                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
                     android:text="@string/Text_btmax"
                     android:textColor="#000"
                     android:textSize="12sp" />
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:padding="2dp" >
+                android:layout_weight="1" >
 
                 <Button
                     android:id="@+id/button_btcon"
@@ -105,9 +106,29 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="50dp"
                     android:background="@drawable/shape_color_main_button"
                     android:text="@string/button_btcon"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/button_scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_color_main_button"
+                    android:text="开始扫描"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
             </RelativeLayout>
