@@ -85,7 +85,8 @@ public class PrintUtil {
 
 		context.getObject().ASCII_CtrlFeedLines(context.getState(), 0);
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
-		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\r\n", "gb2312");
+		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
+		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 
 		context.getObject().ASCII_CtrlAlignType(context.getState(), 0);
 
@@ -94,6 +95,7 @@ public class PrintUtil {
 				1, 0,
 				0, spaceStr + "打印日期: " + info.getTime() + "\n", "gb2312");
 
+		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 		context.getObject().ASCII_CtrlReset(context.getState());
 		context.getObject().ASCII_CtrlAlignType(context.getState(), AlignType.AT_CENTER.getValue());//条码居中显示
 
@@ -106,13 +108,13 @@ public class PrintUtil {
 
 		context.getObject().ASCII_CtrlReset(context.getState());
 		context.getObject().ASCII_CtrlAlignType(context.getState(), AlignType.AT_CENTER.getValue());//条码居中显示
-		//		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 1, 0, 0, info.getBillcode(), "gb2312");
 
 		context.getObject().ASCII_PrintString(context.getState(),
 				1, 1,
 				1, 0,
 				0, info.getBillcode(), "gb2312");
 
+		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 		context.getObject().ASCII_PrintString(context.getState(), 0, 0, 0, 0, 0, "\n", "gb2312");
 		context.getObject().ASCII_CtrlFeedLines(context.getState(), 1);
