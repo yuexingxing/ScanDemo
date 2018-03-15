@@ -49,14 +49,14 @@ public class MenuActivity extends Activity {
 		tvCount = (TextView) findViewById(R.id.activity_menu_count);
 		tvVersion = (TextView) findViewById(R.id.activity_menu_version);
 		tvVersion.setText("v" + ToolsUtil.getVersionName());
-		initData();
+//		initData();
 	}
 
 	public void onResume(){
 		super.onResume();
 
 		//增加失效时间，在规定时间点之前可以使用
-		String limitTime = "2018-03-15 00:00:00";
+		String limitTime = getResources().getString(R.string.limitTime);
 		if(limitTime.compareTo(ToolsUtil.getTime()) < 0){
 			finish();
 		}

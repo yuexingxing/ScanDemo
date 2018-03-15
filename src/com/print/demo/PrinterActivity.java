@@ -106,6 +106,12 @@ public class PrinterActivity extends Activity {
 
 	public void clearData(View v){
 
+		if(dataList.size() == 0){
+			
+			ToolsUtil.showToast("当前列表为空");
+			return;
+		}
+		
 		dataList.clear();
 		commonAdapter.notifyDataSetChanged();
 		ToolsUtil.showToast("列表清除成功");

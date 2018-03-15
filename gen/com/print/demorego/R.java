@@ -367,6 +367,7 @@ public final class R {
         public static final int checkBox_pic=0x7f090099;
         public static final int editText1=0x7f09001f;
         public static final int editText2=0x7f090020;
+        public static final int limitTime=0x7f0900b9;
         public static final int mes_confail=0x7f090008;
         public static final int mes_consuccess=0x7f090009;
         public static final int mes_nextpage=0x7f09000a;

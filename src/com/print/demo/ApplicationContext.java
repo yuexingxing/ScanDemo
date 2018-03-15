@@ -35,8 +35,8 @@ public class ApplicationContext extends Application {
 	public void onCreate() {
 		super.onCreate();
 
-		new DBHelper(this);
-		DBHelper.SQLiteDBHelper.getWritableDatabase();
+//		new DBHelper(this);
+//		DBHelper.SQLiteDBHelper.getWritableDatabase();
 		instance = ApplicationContext.this;
 		if (eventBus == null) {
 			eventBus = EventBus.getDefault();

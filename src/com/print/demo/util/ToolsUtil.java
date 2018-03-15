@@ -4,11 +4,11 @@ import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
-
 import com.print.demo.ApplicationContext;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -68,6 +68,10 @@ public class ToolsUtil {
 			// TODO: handle exception
 		}
 	}
+	
+	public static abstract class CallBack {
+		public abstract void callback(int pos);
+	}
 
 	/**
 	 * 弹出信息，需要手动关
@@ -99,6 +103,42 @@ public class ToolsUtil {
 				arg0.dismiss();
 			}
 		}).show();
+	}
+	
+	/**
+	 * 弹出确认取消框
+	 * @param context
+	 * @param strMsg
+	 */
+	static Builder dialog;
+	public static void showChooseDialog(final Context context, final String strMsg, final CallBack callback) {
+
+		Activity mActivity = (Activity) context;
+		if (mActivity.isFinishing()) {
+			return;
+		}
+
+		dialog = new AlertDialog.Builder(context);
+
+		dialog.setTitle("提示");
+		dialog.setMessage(strMsg + "");
+		dialog.setPositiveButton("确认", new DialogInterface.OnClickListener(){  
+
+			public void onClick(DialogInterface dialoginterface, int i){   
+
+				callback.callback(0);
+			}   
+		});
+		dialog.setNegativeButton("取消", new OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				// TODO Auto-generated method stub
+				callback.callback(-1);
+			}
+		});
+
+		dialog.show();
 	}
 	
 	/**

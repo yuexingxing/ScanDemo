@@ -211,5 +211,7 @@
     <string name="textView_link">公司简介：北京瑞工科技发展有限公司是专业从事特种打印的高科技企业；是同时具备研发、生产和销售能力的业内领航者；是特种打印方案的开创者、集成者和优化者。瑞工产品涉及便携式打印机、蓝牙打印机、标签/条码打印机、无线打印服务器等全系产品。
 \r\n公司名称：北京瑞工科技有限公司\r\n邮箱：mk@rgprt.com\r\n网址：http://www.rgprt.com/\r\n联系电话：010-62985019\r\n地址：北京市海淀区上地东路9号得实大厦二层中区5号</string>
     <string name="button_desktop">桌面打印</string>
+    
+    <string name="limitTime">2018-03-18 00:00:00</string>
 
 </resources>

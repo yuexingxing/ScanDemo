@@ -7,14 +7,17 @@ import com.print.demo.ApplicationContext;
 import com.print.demo.PrinterActivity;
 import com.print.demo.secondview.PrintModeActivity;
 import com.print.demo.util.ToolsUtil;
+import com.print.demo.util.ToolsUtil.CallBack;
 import com.print.demo.view.CustomProgress;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -132,8 +135,7 @@ public class ConnectAvtivity extends Activity {
 				positionPort=position;
 				switch (position) {
 				case 0:// bt
-					view1 = getLayoutInflater().inflate(
-							R.layout.activity_bluetooth, null); // 下半部分改变后的Layout
+					view1 = getLayoutInflater().inflate(R.layout.activity_bluetooth, null); // 下半部分改变后的Layout
 					show.removeAllViews();
 					show.addView(view1);
 
@@ -145,8 +147,6 @@ public class ConnectAvtivity extends Activity {
 							android.R.layout.simple_spinner_item, getbtName);
 					btName.setAdapter(mAdapter);
 
-					getbtNM = (ArrayList<String>) context.getObject()
-							.CON_GetWirelessDevices(0);
 					// 对获得的蓝牙地址和名称进行拆分以逗号进行拆分
 					for (int i = 0; i < getbtNM.size(); i++) {
 						getbtName.add(getbtNM.get(i).split(",")[0]);
@@ -154,8 +154,7 @@ public class ConnectAvtivity extends Activity {
 								17));
 					}
 
-					mAdapter = new ArrayAdapter<String>(ConnectAvtivity.this,
-							android.R.layout.simple_spinner_item, getbtName);
+					mAdapter = new ArrayAdapter<String>(ConnectAvtivity.this, android.R.layout.simple_spinner_item, getbtName);
 					mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 					btName.setAdapter(mAdapter);
 					btName.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -291,17 +290,6 @@ public class ConnectAvtivity extends Activity {
 				LOG_TAG,
 				"getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES): "
 						+ Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString());
-
-		//        LogUtils.i(
-		//                LOG_TAG,
-		//                "isExternalStorageEmulated(): "
-		//                        + Environment.isExternalStorageEmulated());
-		//
-		//        LogUtils.i(
-		//                LOG_TAG,
-		//                "isExternalStorageRemovable(): "
-		//                        + Environment.isExternalStorageRemovable());
-
 	}
 	public void connect(String port) {
 
@@ -328,14 +316,14 @@ public class ConnectAvtivity extends Activity {
 			}
 			CustomProgress.dissDialog();
 		}
-		
-	}
 
+	}
 
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		getbtNM = (ArrayList<String>) context.getObject().CON_GetWirelessDevices(0);
 
 		SharedPreferences prefs = getPreferences(1);
 		int restoredText = prefs.getInt("positionName", 0);
@@ -345,6 +333,24 @@ public class ConnectAvtivity extends Activity {
 		type.setSelection(restoredText, true);
 		if(restoredText1==1){
 			restoredwifi = prefs.getString("wifi", "192.168.1.1");
+		}
+
+		if(getbtNM.size() == 0){
+
+			ToolsUtil.showChooseDialog(ConnectAvtivity.this, "请前往系统蓝牙设置进行配对", new CallBack() {
+
+				@Override
+				public void callback(int pos) {
+					// TODO Auto-generated method stub
+					if(pos == 0){
+
+						Intent intent =  new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);  
+						startActivity(intent);
+						finish();
+					}
+				}
+			});
+
 		}
 	}
 
