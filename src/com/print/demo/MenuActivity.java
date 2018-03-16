@@ -40,7 +40,7 @@ public class MenuActivity extends Activity {
 	private TextView tvVersion;
 	private TextView tvCount;
 	public static List<PrintInfo> sourceList = new ArrayList<PrintInfo>();//本地SD卡Excel表里面的数据
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -75,6 +75,21 @@ public class MenuActivity extends Activity {
 	public void bluetoothSetting(View v){
 
 		Intent intent = new Intent(MenuActivity.this, ConnectAvtivity.class);
+		startActivity(intent);
+	}
+	
+	/**
+	 * 开始扫描
+	 * @param v
+	 */
+	public void startScan(View v){
+		
+//		if(mBconnect == false){
+//			ToolsUtil.showToast("请先连接打印机");
+//			return;
+//		}
+		
+		Intent intent = new Intent(MenuActivity.this, PrinterActivity.class);
 		startActivity(intent);
 	}
 

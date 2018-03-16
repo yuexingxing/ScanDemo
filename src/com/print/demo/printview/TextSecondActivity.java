@@ -171,7 +171,7 @@ public class TextSecondActivity extends Activity {
 							Integer.parseInt(barhight.getText().toString()),
 							hri, bartext.getText().toString());
 					
-					ToolsUtil.showDialog(ToolsUtil.getGlobalActivity(), barcodetype.getSelectedItemPosition() + "," + hri);
+//					ToolsUtil.showDialog(ToolsUtil.getGlobalActivity(), barcodetype.getSelectedItemPosition() + "," + hri);
 				} else {
 					context.getObject().ASCII_Print2DBarcode(
 							context.getState(),

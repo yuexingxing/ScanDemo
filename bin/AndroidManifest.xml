@@ -84,6 +84,7 @@
         </activity>
         <activity
             android:name="com.print.demo.PrinterActivity"
+            android:launchMode="singleInstance"
             android:screenOrientation="portrait" >
         </activity>
     </application>

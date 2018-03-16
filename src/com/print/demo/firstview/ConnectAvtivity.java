@@ -8,17 +8,15 @@ import com.print.demo.PrinterActivity;
 import com.print.demo.secondview.PrintModeActivity;
 import com.print.demo.util.ToolsUtil;
 import com.print.demo.util.ToolsUtil.CallBack;
-import com.print.demo.view.CustomProgress;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -30,7 +28,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 public class ConnectAvtivity extends Activity {
 
@@ -179,7 +176,6 @@ public class ConnectAvtivity extends Activity {
 						@Override
 						public void onClick(View v) {
 
-							CustomProgress.showDialog(ConnectAvtivity.this, "连接中...", true, null);
 							connect(Adress.getText().toString());
 						}
 					});
@@ -291,17 +287,18 @@ public class ConnectAvtivity extends Activity {
 				"getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES): "
 						+ Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString());
 	}
+	
 	public void connect(String port) {
 
 		if (mBconnect) {
+
 			context.getObject().CON_CloseDevices(context.getState());
 
 			con.setText(R.string.button_btcon);// "连接"
 			mBconnect = false;
-			CustomProgress.dissDialog();
 		} else {
 
-			state = context.getObject().CON_ConnectDevices(PrintName, port, 200);
+			state = context.getObject().CON_ConnectDevices(PrintName, port, 300);
 
 			if (state > 0) {
 
@@ -314,7 +311,7 @@ public class ConnectAvtivity extends Activity {
 				mBconnect = false;
 				con.setText(R.string.button_btcon);// "连接"
 			}
-			CustomProgress.dissDialog();
+
 		}
 
 	}
@@ -337,17 +334,14 @@ public class ConnectAvtivity extends Activity {
 
 		if(getbtNM.size() == 0){
 
-			ToolsUtil.showChooseDialog(ConnectAvtivity.this, "请前往系统蓝牙设置进行配对", new CallBack() {
+			ToolsUtil.showDialog(ConnectAvtivity.this, "请前往系统蓝牙设置进行配对", "前往", new CallBack() {
 
 				@Override
 				public void callback(int pos) {
-					// TODO Auto-generated method stub
-					if(pos == 0){
 
-						Intent intent =  new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);  
-						startActivity(intent);
-						finish();
-					}
+					Intent intent =  new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);  
+					startActivity(intent);
+					finish();
 				}
 			});
 
@@ -365,7 +359,19 @@ public class ConnectAvtivity extends Activity {
 		if(positionPort==1){
 			editor.putString("wifi", wifiip.getText().toString());
 		}
+
 		editor.commit();
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+		if (keyCode == KeyEvent.KEYCODE_BACK) { // 获取 back键
+
+			back(null);
+		}
+
+		return false;
 	}
 
 	public void back(View v){
@@ -373,4 +379,11 @@ public class ConnectAvtivity extends Activity {
 		finish();
 	}
 
+	public void onDestpry(){
+		super.onDestroy();
+
+		if(mBconnect){
+			connect(Adress.getText().toString());
+		}
+	}
 }

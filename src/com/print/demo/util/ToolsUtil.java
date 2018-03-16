@@ -68,7 +68,7 @@ public class ToolsUtil {
 			// TODO: handle exception
 		}
 	}
-	
+
 	public static abstract class CallBack {
 		public abstract void callback(int pos);
 	}
@@ -79,7 +79,7 @@ public class ToolsUtil {
 	 * @param context
 	 * @param strMsg
 	 */
-	public static void showDialog(final Context context, final String strMsg) {
+	public static void showDialog(final Context context, final String strMsg, String btnMsg, final CallBack callBack) {
 
 		Activity mActivity = (Activity) context;
 		if (mActivity.isFinishing()) {
@@ -95,16 +95,20 @@ public class ToolsUtil {
 		singleDialog = new AlertDialog.Builder(context)
 		.setTitle("提示")
 		.setMessage(strMsg + "")
-		.setPositiveButton("关闭", new OnClickListener() {
+		.setPositiveButton(btnMsg + "", new OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
 				// TODO Auto-generated method stub
 				arg0.dismiss();
+				if(callBack != null){
+					callBack.callback(0);
+				}
 			}
 		}).show();
+		
 	}
-	
+
 	/**
 	 * 弹出确认取消框
 	 * @param context
@@ -140,7 +144,7 @@ public class ToolsUtil {
 
 		dialog.show();
 	}
-	
+
 	/**
 	 * 获取当前上下文
 	 * @return

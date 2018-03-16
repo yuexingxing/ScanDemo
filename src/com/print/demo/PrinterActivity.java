@@ -5,6 +5,7 @@ import java.util.List;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Message;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ListView;
 import com.print.demo.adapter.CommonAdapter;
@@ -122,5 +123,22 @@ public class PrinterActivity extends Activity {
 		dataList.clear();
 		dataList = null;
 		finish();
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+		if (keyCode == KeyEvent.KEYCODE_BACK) { // »ñÈ¡ back¼ü
+
+			back(null);
+		}
+
+		return false;
+	}
+	
+	public void onDestory(){
+		super.onDestroy();
+		
+		ApplicationContext.getEventBus().unregister(this);
 	}
 }
