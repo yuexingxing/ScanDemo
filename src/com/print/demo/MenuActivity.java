@@ -58,7 +58,7 @@ public class MenuActivity extends Activity {
 		//增加失效时间，在规定时间点之前可以使用
 		String limitTime = getResources().getString(R.string.limitTime);
 		if(limitTime.compareTo(ToolsUtil.getTime()) < 0){
-			finish();
+//			finish();
 		}
 	}
 
