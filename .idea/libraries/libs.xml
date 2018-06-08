@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/PrinterSDKLibV03.02.04.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/eventbus.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jxl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

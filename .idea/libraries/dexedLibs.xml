@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/PrinterSDKLibV03.02.04-a7761662b94beb7c5399f9a619fd160c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/eventbus-073df8b10a827f15739bf729fdc084bb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/jxl-d8ad097074e02d187a85820144c0a1d6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
