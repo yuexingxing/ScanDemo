@@ -28,18 +28,18 @@ import android.view.View;
 import android.widget.TextView;
 
 /** 
- * Ö÷½çÃæ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
- * @author yxx
+ * @author yxx123
  *
- * @date 2018-3-12 ÏÂÎç7:08:07
+ * @date 2018-3-12 ï¿½ï¿½ï¿½ï¿½7:08:07
  * 
  */
 public class MenuActivity extends Activity {
 
 	private TextView tvVersion;
 	private TextView tvCount;
-	public static List<PrintInfo> sourceList = new ArrayList<PrintInfo>();//±¾µØSD¿¨Excel±íÀïÃæµÄÊý¾Ý
+	public static List<PrintInfo> sourceList = new ArrayList<PrintInfo>();//ï¿½ï¿½ï¿½ï¿½SDï¿½ï¿½Excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class MenuActivity extends Activity {
 	public void onResume(){
 		super.onResume();
 
-		//Ôö¼ÓÊ§Ð§Ê±¼ä£¬ÔÚ¹æ¶¨Ê±¼äµãÖ®Ç°¿ÉÒÔÊ¹ÓÃ
+		//ï¿½ï¿½ï¿½ï¿½Ê§Ð§Ê±ï¿½ä£¬ï¿½Ú¹æ¶¨Ê±ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
 		String limitTime = getResources().getString(R.string.limitTime);
 		if(limitTime.compareTo(ToolsUtil.getTime()) < 0){
 //			finish();
@@ -65,11 +65,11 @@ public class MenuActivity extends Activity {
 	private void initData(){
 
 		new ScanDataDao().selectAllData(sourceList);
-		tvCount.setText(sourceList.size() + "Ìõ");
+		tvCount.setText(sourceList.size() + "ï¿½ï¿½");
 	}
 
 	/**
-	 * À¶ÑÀÉèÖÃ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param v
 	 */
 	public void bluetoothSetting(View v){
@@ -79,13 +79,13 @@ public class MenuActivity extends Activity {
 	}
 	
 	/**
-	 * ¿ªÊ¼É¨Ãè
+	 * ï¿½ï¿½Ê¼É¨ï¿½ï¿½
 	 * @param v
 	 */
 	public void startScan(View v){
 		
 //		if(mBconnect == false){
-//			ToolsUtil.showToast("ÇëÏÈÁ¬½Ó´òÓ¡»ú");
+//			ToolsUtil.showToast("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó´ï¿½Ó¡ï¿½ï¿½");
 //			return;
 //		}
 		
@@ -94,13 +94,13 @@ public class MenuActivity extends Activity {
 	}
 
 	/**
-	 * µ¼ÈëÊý¾Ý
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param v
 	 */
 	public void inputExcel(View v){
 
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-		intent.setType("*/*");//ÉèÖÃÀàÐÍ£¬ÎÒÕâÀïÊÇÈÎÒâÀàÐÍ£¬ÈÎÒâºó×ºµÄ¿ÉÒÔÕâÑùÐ´¡£
+		intent.setType("*/*");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ºï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½
 		intent.addCategory(Intent.CATEGORY_OPENABLE);
 		startActivityForResult(intent,1);
 	}
@@ -110,7 +110,7 @@ public class MenuActivity extends Activity {
 
 		if (resultCode == Activity.RESULT_OK) {  
 			Uri uri = data.getData();  
-			if ("file".equalsIgnoreCase(uri.getScheme())){//Ê¹ÓÃµÚÈý·½Ó¦ÓÃ´ò¿ª  
+			if ("file".equalsIgnoreCase(uri.getScheme())){//Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã´ï¿½  
 
 				if(uri.getPath().endsWith(".xls") || uri.getPath().endsWith(".xlsx")){
 
@@ -120,9 +120,9 @@ public class MenuActivity extends Activity {
 						public void callback(int pos) {
 							// TODO Auto-generated method stub
 							if(pos == 0 && sourceList.size() > 0){
-								ToolsUtil.showToast("Êý¾Ýµ¼Èë³É¹¦");
+								ToolsUtil.showToast("ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½É¹ï¿½");
 							}else{
-								ToolsUtil.showToast("Êý¾Ýµ¼ÈëÊ§°Ü£¬Çë²é¿´ExcelÊý¾Ý¸ñÊ½ÊÇ·ñÕýÈ·");
+								ToolsUtil.showToast("ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½é¿´Excelï¿½ï¿½ï¿½Ý¸ï¿½Ê½ï¿½Ç·ï¿½ï¿½ï¿½È·");
 							}
 
 							initData();
@@ -130,15 +130,15 @@ public class MenuActivity extends Activity {
 					});
 
 				}else{
-					ToolsUtil.showToast("ÇëÑ¡ÔñÕýÈ·µÄExcelÎÄ¼þ");
+					ToolsUtil.showToast("ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½Excelï¿½Ä¼ï¿½");
 				}
 				return;  
 			}  
 
-			if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {//4.4ÒÔºó  
+			if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {//4.4ï¿½Ôºï¿½  
 				String path = getPath(this, uri);  
 				//				Toast.makeText(this,path.toString(),Toast.LENGTH_SHORT).show();  
-			} else {//4.4Ò»ÏÂÏµÍ³µ÷ÓÃ·½·¨  
+			} else {//4.4Ò»ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½  
 				//				Toast.makeText(MenuActivity.this, getRealPathFromURI(uri)+"222222", Toast.LENGTH_SHORT).show();  
 			}  
 		}  
@@ -147,7 +147,7 @@ public class MenuActivity extends Activity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
-		if (keyCode == KeyEvent.KEYCODE_BACK) { // »ñÈ¡ back¼ü
+		if (keyCode == KeyEvent.KEYCODE_BACK) { // ï¿½ï¿½È¡ backï¿½ï¿½
 
 			exit();
 		}
@@ -158,16 +158,16 @@ public class MenuActivity extends Activity {
 	public void exit(){
 
 		new AlertDialog.Builder(this)
-		.setTitle("ÌáÊ¾")
-		.setMessage("È·ÈÏÍË³ö³ÌÐò£¿")
-		.setPositiveButton("È·ÈÏ", new DialogInterface.OnClickListener() {
+		.setTitle("ï¿½ï¿½Ê¾")
+		.setMessage("È·ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½")
+		.setPositiveButton("È·ï¿½ï¿½", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 
 				finish();
 			}
-		}).setNegativeButton("È¡Ïû", null).show();
+		}).setNegativeButton("È¡ï¿½ï¿½", null).show();
 	}
 
 	public String getRealPathFromURI(Uri contentUri) {  
@@ -183,7 +183,7 @@ public class MenuActivity extends Activity {
 	}  
 
 	/**  
-	 * ×¨ÎªAndroid4.4Éè¼ÆµÄ´ÓUri»ñÈ¡ÎÄ¼þ¾ø¶ÔÂ·¾¶£¬ÒÔÇ°µÄ·½·¨ÒÑ²»ºÃÊ¹  
+	 * ×¨ÎªAndroid4.4ï¿½ï¿½ÆµÄ´ï¿½Uriï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ä·ï¿½ï¿½ï¿½ï¿½Ñ²ï¿½ï¿½ï¿½Ê¹  
 	 */  
 	@SuppressLint("NewApi")  
 	public String getPath(final Context context, final Uri uri) {  
